@@ -159,7 +159,7 @@ Yii::info([
 
 // short_message will contain 'Test short message',
 // two additional fields will be sent,
-// full_message will contain all other stuff without 'short' and 'add':
+// full_message will contain all other stuff without 'short' and 'additional':
 // string representation of ['test1' => 123, 'test2' => 456]
 Yii::info([
     'test1' => 123,

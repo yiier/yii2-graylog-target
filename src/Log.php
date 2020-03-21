@@ -26,12 +26,12 @@ class Log
         $argOffset = 0;
 
         // $message['trace_id'] = request()->requestId; todo
-
         $message['short'] = ArrayHelper::remove($message, (string)(0 + $argOffset));
         $message['full'] = ArrayHelper::remove($message, (string)(1 + $argOffset));
         $message['additional'] = ArrayHelper::remove($message, (string)(2 + $argOffset));
-        $category = ArrayHelper::remove($message, (string)(3 + $argOffset), 'graylog');
 
+        $category = ArrayHelper::remove($message, (string)(3 + $argOffset), 'graylog');
+        
         $level = self::mapYiiLevel($name);
 
         \Yii::getLogger()->log($message, $level, $category);
