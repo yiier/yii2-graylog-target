@@ -36,23 +36,23 @@ return [
             'targets' => [
                 'graylog' => [
                     'class' => yiier\graylog\Target::class,
-                        'levels' => ['error', 'warning', 'info'],
-                        // 'categories' => ['application', 'graylog'],
-                        // 'logVars' => ['_GET', '_POST', '_FILES', '_COOKIE', '_SESSION'],
-                        // 'facility' => 'facility-name',
-                        'transport' => [
-                            'class' => yiier\graylog\transport\UdpTransport::class,
-                            'host' => '127.0.0.1',
-                            'port' => '1231',
-                            'chunkSize' => 4321,
-                        ],
-                        'additionalFields' => [
-                            'user-ip' => function ($yii) {
-                                return ($yii instanceof \yii\console\Application) ? '' : $yii->request->userIP;
-                            },
-                            'tag' => 'tag-name'
-                        ],
+                    'levels' => ['error', 'warning', 'info'],
+                    // 'categories' => ['application', 'graylog'],
+                    // 'logVars' => ['_GET', '_POST', '_FILES', '_COOKIE', '_SESSION'],
+                    // 'facility' => 'facility-name',
+                    'transport' => [
+                        'class' => yiier\graylog\transport\UdpTransport::class,
+                        'host' => '127.0.0.1',
+                        'port' => '1231',
+                        'chunkSize' => 4321,
                     ],
+                    'additionalFields' => [
+                        'user-ip' => function ($yii) {
+                            return ($yii instanceof \yii\console\Application) ? '' : $yii->request->userIP;
+                        },
+                        'tag' => 'tag-name'
+                    ],
+                ],
             ],
         ],
     ],
