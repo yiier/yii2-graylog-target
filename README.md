@@ -37,7 +37,7 @@ return [
                 'graylog' => [
                     'class' => yiier\graylog\Target::class,
                         'levels' => ['error', 'warning', 'info'],
-                        // 'categories' => ['application'],
+                        // 'categories' => ['application', 'graylog'],
                         // 'logVars' => ['_GET', '_POST', '_FILES', '_COOKIE', '_SESSION'],
                         // 'facility' => 'facility-name',
                         'transport' => [
@@ -124,6 +124,29 @@ Usage
 -----
 
 Once the extension is installed, simply use it in your code by  :
+
+### Use `\yiier\graylog\Log::info`
+
+```php
+<?php
+\yiier\graylog\Log::info(
+    'Test short message',
+    'Test full message'
+);
+
+
+\yiier\graylog\Log::info(
+    'Test short message',
+    'Test full message', 
+    [
+        'additional1' => 'abc',
+        'additional2' => 'def',
+    ],
+    'graylog'
+);
+```
+
+### Use `Yii::info`
 
 ```php
 <?php
