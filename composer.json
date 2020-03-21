@@ -1,0 +1,30 @@
+{
+  "name": "yiier/yii2-graylog-target",
+  "description": "Graylog log target for Yii2",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "extension",
+    "graylog"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "forecho",
+      "email": "caizhenghai@gmail.com"
+    }
+  ],
+  "require": {
+    "graylog2/gelf-php": "^1.6",
+    "yiisoft/yii2": "^2.0"
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.5",
+    "yiisoft/yii2-coding-standards": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "yiier\\graylog\\": "src"
+    }
+  }
+}
